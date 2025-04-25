@@ -28,7 +28,11 @@ reusable functions that solve specific tasks. This activity encourages:
 // ============================================
 // Create a function that:
 // - Takes a name and a role (e.g., "Alice", "speaker")
-// - Returns a string in the format: "Name: Alice, Role: Speaker"
+// - Returns a string in the format: "Name: Alice, Role: Speaker" 
+function generateBadge(name,role){
+    console.log(`Name:${name}, Role:${role}`);
+}
+generateBadge("Alice", "Speaker");
 
 // Steps:
 // 1. Define the function with two parameters.
@@ -44,7 +48,14 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Takes number of attendees and cost per attendee.
 // - Applies a 10% discount if attendees exceed 100.
 // - Returns the total cost.
-
+function calculateEventCost(attendees, costPerAttendee) {
+    let totalCost = attendees  * costPerAttendee
+    if (attendees > 100) {
+        totalCost *= 0.9; // 10% discount
+      }
+    return totalCost;
+    }
+    console.log(calculateEventCost(120, 50)); 
 // Steps:
 // 1. Multiply attendees by cost.
 // 2. Check if attendee count is over 100.
