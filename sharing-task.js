@@ -29,16 +29,15 @@ reusable functions that solve specific tasks. This activity encourages:
 // Create a function that:
 // - Takes a name and a role (e.g., "Alice", "speaker")
 // - Returns a string in the format: "Name: Alice, Role: Speaker" 
-function generateBadge(name,role){
-    console.log(`Name:${name}, Role:${role}`);
-}
-generateBadge("Alice", "Speaker");
-
 // Steps:
 // 1. Define the function with two parameters.
 // 2. Format the output string properly.
 // 3. Capitalize the role if needed.
 // 4. Return the result.
+function generateBadge(name,role){
+    console.log(`Name:${name}, Role:${role}`);
+}
+generateBadge("Alice", "Speaker");
 
 
 // ============================================
@@ -48,6 +47,11 @@ generateBadge("Alice", "Speaker");
 // - Takes number of attendees and cost per attendee.
 // - Applies a 10% discount if attendees exceed 100.
 // - Returns the total cost.
+// Steps:
+// 1. Multiply attendees by cost.
+// 2. Check if attendee count is over 100.
+// 3. If so, apply a 10% discount.
+// 4. Return the final total.
 function calculateEventCost(attendees, costPerAttendee) {
     let totalCost = attendees  * costPerAttendee
     if (attendees > 100) {
@@ -56,11 +60,6 @@ function calculateEventCost(attendees, costPerAttendee) {
     return totalCost;
     }
     console.log(calculateEventCost(120, 50)); 
-// Steps:
-// 1. Multiply attendees by cost.
-// 2. Check if attendee count is over 100.
-// 3. If so, apply a 10% discount.
-// 4. Return the final total.
 
 
 // ============================================
@@ -74,6 +73,13 @@ function calculateEventCost(attendees, costPerAttendee) {
 // Steps:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
+function validateEmail(email) {
+    if (email.includes("@") && email.includes(".")) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 
 // ============================================
