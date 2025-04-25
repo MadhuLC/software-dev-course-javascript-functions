@@ -80,6 +80,7 @@ function validateEmail(email) {
       return false;
     }
   }
+  console.log(validateEmail("test@example.com"));
 
 
 // ============================================
